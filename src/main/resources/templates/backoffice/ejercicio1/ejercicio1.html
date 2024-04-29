@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="frontend/fragment/layout :: head">
+    <meta charset="UTF-8">
+    <title>Ejercicio</title>
+</head>
+<body>
+<nav th:replace="frontend/fragment/layout :: menu"></nav>
+<div class="card">
+    <div class="card-header">
+        Ejercicio 1
+    </div>
+    <div class="card-body">
+        <form th:action="@{/ejercicio1}" method="post" th:object="${ejercicio1}">
+            <div class="mb-3">
+                <label class="form-label" >Edad</label>
+                <input th:field="*{edad}" type="text" class="form-control" name="edad">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" name="sexo">Sexo</label>
+                <select  th:field="*{sexo}" type="text" class="form-control">
+                    <option value="0">Hombre</option>
+                    <option value="1">Mujer</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Consultar</button>
+            </div>
+
+        </form>
+        <div class="alert alert-success" th:if="${resultado != null}">
+            <p th:text="${resultado}"></p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package com.cl1.DAWI_CL1_Grupo5_EdgarPerez.model;
+package com.cl1.DAWI_CL1_Grupo5_EdgarPerez.model.bd;
 
 import lombok.Data;
 

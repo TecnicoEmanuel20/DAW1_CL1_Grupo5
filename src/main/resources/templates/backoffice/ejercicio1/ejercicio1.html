@@ -19,8 +19,9 @@
             <div class="mb-3">
                 <label class="form-label" name="sexo">Sexo</label>
                 <select  th:field="*{sexo}" type="text" class="form-control">
-                    <option value="0">Hombre</option>
-                    <option value="1">Mujer</option>
+                    <option value="0">seleccione</option>
+                    <option value="1">Hombre</option>
+                    <option value="2">Mujer</option>
                 </select>
             </div>
             <div>
@@ -28,9 +29,10 @@
             </div>
 
         </form>
-        <div class="alert alert-success" th:if="${resultado != null}">
+        <div style="margin-top: 20px;" class="alert alert-success" th:if="${resultado != null}">
             <p th:text="${resultado}"></p>
     </div>
 </div>
+    </div>
 </body>
 </html>

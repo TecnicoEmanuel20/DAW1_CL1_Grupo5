@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="frontend/fragment/layout :: head">
+    <meta charset="UTF-8">
+    <title>Resultados de números</title>
+</head>
+<body>
+<nav th:replace="frontend/fragment/layout :: menu"></nav>
+<h1 style="text-align:center; margin:20px" >Resultados de números</h1>
+<center>
+    <table style="border: 3px red solid; margin:30px">
+        <thead style="border: 3px red solid;">
+        <tr style="border: 3px red solid;">
+            <th style="border: 3px red solid; padding:13px; text-align:center">Número Original</th>
+            <th style="border: 3px red solid; padding:13px; text-align:center">Cuadrado</th>
+            <th style="border: 3px red solid; padding:13px; text-align:center">Mitad</th>
+        </tr>
+        </thead>
+        <tbody style="border: 3px red solid;" th:action="@{/ejercicio4}">
+        <tr th:each="resultado : ${resultados}">
+            <td style="border: 3px red solid; padding:13px; text-align:center" th:text="${resultado.numeroOriginal}"></td>
+            <td style="border: 3px red solid; padding:13px; text-align:center" th:text="${resultado.cuadrado}"></td>
+            <td style="border: 3px red solid; padding:13px; text-align:center" th:text="${resultado.mitad}"></td>
+        </tr>
+        </tbody>
+    </table>
+</center>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="frontend/fragment/layout :: head">
+    <meta charset="UTF-8">
+    <title>Ejercicio3</title>
+</head>
+<body>
+<nav th:replace="frontend/fragment/layout :: menu"></nav>
+<div class="card">
+    <div class="card-header">
+        Ejercicio 3
+    </div>
+    <div class="card-body">
+        <form th:action="@{/ejercicio3}" method="post" th:object="${ejercicio3}">
+            <div class="mb-3">
+                <label class="form-label" >Numero de Materias</label>
+                <input th:field="*{materia}" type="text" class="form-control" name="materia">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Consultar</button>
+            </div>
+        </form>
+        <div style="margin-top: 20px;" class="alert alert-success" th:if="${resultado != null}">
+            <p th:text="${resultado}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
